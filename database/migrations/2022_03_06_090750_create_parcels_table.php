@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePropertyTable extends Migration
+class CreateParcelsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,15 @@ class CreatePropertyTable extends Migration
      */
     public function up()
     {
-        Schema::create('property', function (Blueprint $table) {
+        Schema::create('parcels', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('persons_id');
-            $table->string('pName')->nullable();
-            $table->bigInteger('cN')->nullable();
-            $table->bigInteger('ares')->nullable();
+            $table->string('PCN')->nullable();
+            $table->string('pAres')->nullable();
+            $table->string('value')->nullable();
             $table->foreign('persons_id')
                 ->references('id')
-                ->on('persons')
+                ->on('property')
                 ->onDelete('cascade');
 
             $table->timestamps();
@@ -35,6 +35,6 @@ class CreatePropertyTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('property');
+        Schema::dropIfExists('parcels');
     }
 }

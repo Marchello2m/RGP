@@ -5,8 +5,8 @@
 
     <form action="addPerson" method="POST">
         @csrf
-        <div class="container2" style="overflow-x:auto;">
-            <h1>info about person </h1>
+        <div class="container" style="overflow-x:auto;">
+            <h1>ADD info about person </h1>
 
             <div>
                 <label for="name" class="form-label">Name</label>
@@ -29,18 +29,36 @@
                 <input type="text" class="form-control" name="pName">
             </div>
             <div>
-                <label for="cN" class="form-label">Cadastra Number</label>
-                <input type="text" class="form-control" name="cN">
+                <label for="cN" class="form-label">Cadastral  Number</label>
+                <input type="number" class="form-control" name="cN">
             </div>
             <div>
-                <label for="ares" class="form-label">Cik liels</label>
-                <input type="text" class="form-control" name="ares">
+                <label for="ares" class="form-label">How Big/ha</label>
+                <input type="number" class="form-control" name="ares">
             </div>
+            <div class="property_div">
+            </div>
+          ADD More Properties: <span class="fa fa-plus add"></span>
+
+
             <div class="col-12">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </div>
     </form>
+    <script>
+        $(document).ready(function () {
+            let i = 1;
+            $('.add').on('click', function () {
+                let field = '<br> ' + i + ' <div>Property Name:  <input type="text" class="form-control" name="pName">  ' +
+                    'Property Cadastral numbber:  <input type="number" class="form-control" name="cN">' +
+                    'How big:  <input type="number" class="form-control" name="ares">'
+                   ;
+                $('.property_div').append(field);
+                i = i + 1;
+            })
+        })
+    </script>
 @endsection
 
 

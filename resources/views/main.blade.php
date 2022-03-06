@@ -2,7 +2,8 @@
 
 @section('content')
     <form action="/" method="GET">
-       <h1>Pēc tam outputos</h1>
+       <h1>Client Data</h1>
+        <div class="container2" style="overflow-x:auto;">
         <table class="table">
             <thead>
             <tr>
@@ -16,18 +17,19 @@
             @foreach($persons as $person)
             <tr>
 
-                <th scope="row">1</th>
+                <th scope="row">{{$person->id}}</th>
                 <td>{{$person->name}}</td>
                 <td>{{$person->phone}}</td>
                 <td>{{$person->email}}</td>
-            <td> <button>Delete</button></td>
-            <td> <button>Edit</button></td>
+                <td><a href="/delete/{{$person->id}}">Delete</a></td>
+                <td><a href="/edit/{{$person->id}}">Edit</a></td>
+                <td> <a href="/one/{{$person->id}}">Preview</a></td>
             </tr>
             @endforeach
             </tbody>
         </table>
 
-
+        </div>
     </form>
 @endsection
 

@@ -9,9 +9,14 @@ class Property extends Model
 {
     use HasFactory;
     protected $table='property';
-
+    protected $fillable = ['persons_id', 'pName', 'cN', 'ares'];
+    public $timestamps = false;
     public function person()
     {
         return $this->belongsTo(Persons::class);
+    }
+    public function parcel()
+    {
+        return $this->hasMany(Parcel::class);
     }
 }

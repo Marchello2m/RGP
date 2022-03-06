@@ -20,14 +20,14 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 </head>
-<body>
+<body >
 <div class="container-fluid " id="app">
 
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ url('/') }}">
-                LOGO
+                <img class="alignnone size-medium wp-image-109 aligncenter" src="http://test.creativeit.lv/reinis/rgp.lv/wp-content/uploads/2018/01/Palma-TIMBER_big-300x71.png" alt="" width="300" height="71" srcset="http://rgp.lv/wp-content/uploads/2018/01/Palma-TIMBER_big-300x71.png 300w, http://rgp.lv/wp-content/uploads/2018/01/Palma-TIMBER_big.png 746w" sizes="(max-width: 300px) 100vw, 300px">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

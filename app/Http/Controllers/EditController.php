@@ -24,7 +24,7 @@ class EditController extends Controller
            $property->save();
        }
        $property= Property::find($request->id);
-       $property->persons_id=$person->id;
+      $property->persons_id=$person->id;
        $property->pName=$request->input('pName');
        $property->cN=$request->input('cN');
        $property->ares=$request->input('ares');

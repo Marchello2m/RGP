@@ -23,15 +23,19 @@
                 @if(empty($property) )
                     Property Name:
                     <input type="text" name="pName" value=" {{!empty($property->pName)}}" > <br> <br>
-
+                    Property Cadastrial Number:
+                    <input type="text" name="cN" value=" {{!empty($property->cN)}}" > <br> <br>
+                    Property Sizes in:
+                    <input type="text" name="ares" value=" {{!empty($property->ares)}}" > ha
+                    <br> <br>
                 @else
                     Property Name:
                     <input type="text" name="pName" value=" {{$property->pName}}" > <br> <br>
                     Property Cadastrial Number:
                     <input type="text" name="cN" value=" {{$property->cN}}" > <br> <br>
                     Property Sizes in:
-                    <input type="text" name="ares" value=" {{$property->ares}}" > ha
-                    <br> <br>
+                    <input type="text" name="ares" value=" {{$property->ares}}" > ha   <br> <br>
+
 
 
 

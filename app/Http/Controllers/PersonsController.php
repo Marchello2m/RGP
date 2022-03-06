@@ -16,7 +16,7 @@ class PersonsController extends Controller
        $this->validate(request(), [
            'name' => 'required',
            'phone' => 'required',
-           'email' => 'required|email|email',
+           'email' => 'required|email|',
 
        ]);
        $person =new Persons();

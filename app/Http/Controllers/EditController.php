@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Parcel;
 use App\Models\Persons;
 use App\Models\Property;
 use Illuminate\Http\Request;
@@ -31,14 +32,24 @@ class EditController extends Controller
        $property->updated_at = Carbon::now();
        $property->save();
 
+       $parcels= Property::find($request->id);
+       $parcels->person_id =$person->id;
+       $parcels->PCN =$request->input('PCN');
+       $parcels->pAres =$request->input('pAres');
+       $parcels->value =$request->input('value');
+       $parcels->updated_at = Carbon::now();
+       $parcels->save();
+
+
        return redirect('/')->with('message', 'Update success!');
    }
     public function showEdit($id)
     {
         $person = Persons::find($id);
         $property = Property::find($id);
+        $parcels = Parcel::find($id);
 
-        return view('edit', compact('person','property'));
+        return view('edit', compact('person','property','parcels'));
 
     }
 }

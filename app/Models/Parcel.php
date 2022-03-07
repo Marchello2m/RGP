@@ -9,8 +9,10 @@ class Parcel extends Model
 {
     use HasFactory;
 
-    protected $table='parcel';
-
+    protected $table='parcels';
+    protected $fillable = [
+        'PCN', 'pAres', 'value'
+    ];
     public function property()
     {
         return $this->belongsTo(Property::class);

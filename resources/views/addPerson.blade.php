@@ -41,6 +41,26 @@
          ADD More Properties: <span class="fa fa-plus add"></span>
 
 
+
+            <h1>Property Parcel </h1>
+            <div >
+                <label for="PCN" class="form-label">Parcel Cadastral Number</label>
+                <input type="text" class="form-control" name="PCN" required>
+            </div>
+            <div>
+                <label for="pAres" class="form-label">Ares</label>
+                <input type="number" class="form-control" name="pAres" required>
+            </div>
+            <div>
+                <label for="value" class="form-label">Value</label>
+                <input type="number" class="form-control" name="value" required>
+            </div>
+            <div class="value_div">
+            </div>
+            ADD More Parcels: <span class="fa fa-plus parcels"></span>
+
+
+
             <div class="col-12">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
@@ -56,6 +76,17 @@
                     'How big:  <input type="number" class="form-control" name="ares">'
                    ;
                 $('.property_div').append(field);
+                i = i + 1;
+            })
+        })
+        $(document).ready(function () {
+            let i = 1;
+            $('.parcels').on('click', function () {
+                let field = '<br> ' + i + ' <div>Parcel Cadastrial Number:  <input type="text" class="form-control" name="PCN" required> ' +
+                    'Parcel ares :    <input type="number" class="form-control" name="pAres" required>' +
+                    ' Value:    <input type="number" class="form-control" name="VALUE" required>'
+                ;
+                $('.value_div').append(field);
                 i = i + 1;
             })
         })

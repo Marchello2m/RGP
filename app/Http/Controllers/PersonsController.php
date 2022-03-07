@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Parcel;
 use App\Models\Persons;
 use App\Models\Property;
 use Carbon\Carbon;
@@ -47,6 +48,15 @@ class PersonsController extends Controller
         $property->created_at = Carbon::now();
         $property->save();
 
+              $parcel =new Parcel();
+              $parcel->persons_id = $person->id;
+              $parcel->PCN =$request->PCN;
+              $parcel->pAres =$request->pAres;
+              $parcel->Value =$request->value;
+              $parcel->created_at = Carbon::now();
+              $parcel ->save();
+
+
 
         return redirect('/',)->with('message', 'Person data Saved in db');
     }
@@ -55,9 +65,10 @@ class PersonsController extends Controller
     {
         $person = Persons::find($id);
         $property = Property::find($id);
+        $parcels = Parcel::find($id);
 
 
-        return view('one', compact('person', 'property'));
+        return view('one', compact('person', 'property','parcels'));
     }
 
 

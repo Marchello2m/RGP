@@ -35,14 +35,29 @@
                     <input type="text" name="cN" value=" {{$property->cN}}" > <br> <br>
                     Property Sizes in:
                     <input type="text" name="ares" value=" {{$property->ares}}" > ha   <br> <br>
-
-
-
-
                 @endif
-
             </div>
+            <a class="pop" ONCLICK="Parcels()">Parcels</a> <br> <br>
+            <div ID="parcels" STYLE="display:none">
+                <h1>Parcels</h1>
 
+                @if(empty($parcels) )
+                   Parcel Cadastrial Number:
+                    <input type="text" name="PCN" value=" {{!empty($parcels->PCN)}}" > <br> <br>
+                    Parcel size:
+                    <input type="text" name="pAres" value=" {{!empty($parcels->pAres)}}" > <br> <br>
+                    Parcel Value:
+                    <input type="text" name="value" value=" {{!empty($parcels->value)}}" > EUR
+                    <br> <br>
+                @else
+                    Parcel Cadastrial Number:
+                    <input type="text" name="PCN" value=" {{$parcels->PCN}}" > <br> <br>
+                    Parcel size:
+                    <input type="text" name="pAres" value=" {{$parcels->pAres}}" > <br> <br>
+                    Parcel Value:
+                    <input type="text" name="value" value=" {{$parcels->value}}" > EUR
+                @endif
+            </div>
 
             </div>
             <button type="submit">Update</button>
@@ -62,7 +77,14 @@
             x.style.display = 'none';
         }
     }
-
+    function Parcels() {
+        let x = document.getElementById('parcels');
+        if (x.style.display == 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
 
 
 </script>

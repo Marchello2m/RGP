@@ -27,7 +27,19 @@
                 <a href="/edit/{{$person->id}}">here</a>
             @endif
         </div>
-
+        <div class="parcels">
+            @if(!empty($parcels))
+                <h1>About clients Property</h1>
+                <p>Property Parcel Cadastral Number:{{$parcels->PCN}}</p>
+                <p>Parcel size :{{$parcels->pAres}}</p>
+                <p>Parcel Value : {{$parcels->value}} ha</p>
+            @else
+                <h1>About clients Property parcel</h1>
+                No data added... <br>
+                You can add data in edit page
+                <a href="/edit/{{$person->id}}">here</a>
+            @endif
+        </div>
     </div>
 
 @endsection

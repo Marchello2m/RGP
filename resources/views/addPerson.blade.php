@@ -24,7 +24,7 @@
             </div>
 
             <h1>Property </h1>
-            <div>
+            <div >
                 <label for="pName" class="form-label">Property Name</label>
                 <input type="text" class="form-control" name="pName" required>
             </div>
@@ -38,7 +38,7 @@
             </div>
             <div class="property_div">
             </div>
-          ADD More Properties: <span class="fa fa-plus add"></span>
+         ADD More Properties: <span class="fa fa-plus add"></span>
 
 
             <div class="col-12">
@@ -46,6 +46,7 @@
             </div>
         </div>
     </form>
+
     <script>
         $(document).ready(function () {
             let i = 1;

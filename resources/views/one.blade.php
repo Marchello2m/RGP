@@ -3,7 +3,7 @@
 @section('content')
     <div>Preview</div>
 
-    <button onclick="history.back()">Go Back</button>
+
     <div class="container">
 
 

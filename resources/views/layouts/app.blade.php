@@ -40,7 +40,7 @@
                         <a class="nav-link active" aria-current="page" href="/">HOME</a>
                     </li>
 <li>
-    <a class="nav-link active" aria-current="page" href="/addPerson">AddPerson</a>
+    <a class="nav-link active" aria-current="page" href="/addPerson">Add Person Data</a>
 </li>
 
 

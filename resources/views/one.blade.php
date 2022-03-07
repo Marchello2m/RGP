@@ -16,9 +16,9 @@
         </div>
         <div class="property">
             @if(!empty($property))
-            <h1>About clients Property</h1>
-           <p>Property Name :{{$property->pName}}</p>
-           <p>Cadastral Number :{{$property->cN}}</p>
+            <h1>About clients Property </h1>
+           <p>Property Name : {{$property->pName}}</p>
+           <p>Cadastral Number : {{$property->cN}}</p>
            <p>Property Size : {{$property->ares}} ha</p>
             @else
                 <h1>About clients Property</h1>
@@ -29,9 +29,9 @@
         </div>
         <div class="parcels">
             @if(!empty($parcels))
-                <h1>About clients Property</h1>
-                <p>Property Parcel Cadastral Number:{{$parcels->PCN}}</p>
-                <p>Parcel size :{{$parcels->pAres}}</p>
+                <h1>About clients Property Parcel</h1>
+                <p>Property Parcel Cadastral Number: {{$parcels->PCN}}</p>
+                <p>Parcel size : {{$parcels->pAres}}</p>
                 <p>Parcel Value : {{$parcels->value}} ha</p>
             @else
                 <h1>About clients Property parcel</h1>

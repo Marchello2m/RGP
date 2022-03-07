@@ -29,18 +29,9 @@ class PersonsController extends Controller
         $person->save();
 
 
-        /*
-                $property = new Property();
-               $property->persons_id = $person->id;
-               $values = array(
-                   'persons_id'=>$person->id,
-                   'pName' => $request->pName,
-                   'cN' => $request->cN,
-                   'ares'=>$request->ares,
-                   'created_at'=>Carbon::now()
-               );
-               DB::table('property')->insert($values);*/
-        $property = new Property();
+
+
+       $property = new Property();
         $property->persons_id = $person->id;
         $property->pName = $request->pName;
         $property->cN = $request->cN;
